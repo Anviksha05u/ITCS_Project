@@ -22,7 +22,8 @@ while true:
     count+=1
   for c in contours:
     if cv2.contourArea(c)<10000:
-      continue 
-    x, y, w, h=cv2.boundingRect(c)
-cv2.rectangle(frame, (x,y), (x+w), (y+h), (0,0,255), 2)
-text="OCCUPIED"
+      continue
+      x, y, w, h=cv2.boundingRect(c)
+      cv2.rectangle(frame, (x,y), (x+w), (y+h), (0,0,255), 2)
+      text="OCCUPIED"
+      cv2.putText(frame, datetime.datetime.now().strftime("%A, %d, %B, %d
